@@ -39,12 +39,18 @@ UIApplicationShortcutItemUserInfo (optional):
 > A dictionary to save data.
 
 ## Set dynamic quick actions 
-### Create Custom Quick Actions 
-
-4 . Define our shortcut either from UIMutableApplicationShortcutItem or UIApplicationShortcutItem 
+### Add the following method in the SceneDelegate.swift file 
+```swift 
+    func sceneWillResignActive(_ scene: UIScene) {
+        let application = UIApplication.shared
+        application.shortcutItems = [
+            UIApplicationShortcutItem(type: "trash", localizedTitle: "Trash", localizedSubtitle: nil, icon: UIApplicationShortcutIcon(systemImageName: "trash.slash.circle"))]
+        
+    }
+```
 
 ## Implementation 
-### add the following method in the SceneDelegate.swift file 
+### Add the following method in the SceneDelegate.swift file 
 ```swift 
     func windowScene(_ windowScene: UIWindowScene,
                      performActionFor shortcutItem: UIApplicationShortcutItem,
