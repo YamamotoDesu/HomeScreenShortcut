@@ -18,7 +18,7 @@ Apple Developer website: https://developer.apple.com/sf-symbols
 2 . Copy files that were exported into your project’s assets
 <img width="1021" alt="Copy" src="https://github.com/YamamotoDesu/HomeScreenShortcut/blob/main/HomeScreenShortcut/Gif/Copy.gif">
 
-## set static quick actions
+## Set static quick actions
 ### Use these icons as values for the UIApplicationShortcutItemIconFile field inside the app icon section of the Info.plist(static quick actions)　
 
 <img width="1021" alt="Info_plist" src="https://user-images.githubusercontent.com/47273077/136687095-59a1ce14-330e-4bbc-98cf-75cc5f28dcfc.png">
