@@ -44,5 +44,24 @@ UIApplicationShortcutItemUserInfo (optional):
 4 . Define our shortcut either from UIMutableApplicationShortcutItem or UIApplicationShortcutItem 
 
 ## Implementation 
+### add the following method in the SceneDelegate.swift file 
+```swift 
+    func windowScene(_ windowScene: UIWindowScene,
+                     performActionFor shortcutItem: UIApplicationShortcutItem,
+                     completionHandler: @escaping (Bool) -> Void) {
+        
+        switch shortcutItem.type {
+        case "send", "trash":
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()) {
+                self.window?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
+                let alert = UIAlertController(title: "Hey", message: "Your quick action works!", preferredStyle: .alert)
+                let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alert.addAction(action)
+                self.window?.rootViewController?.present(alert, animated: true, completion: nil)
+            }
+        default: break
+        }
+    }
 
+``` 
 
