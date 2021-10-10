@@ -4,3 +4,7 @@
 ## Where to get SF Symbols
 Apple Developer website: https://developer.apple.com/sf-symbols
 
+## How to use
+1 . Export > choose destination folder for exported templated
+
+2. Copy files that were exported into your project’s assets
