@@ -9,3 +9,5 @@ Apple Developer website: https://developer.apple.com/sf-symbols
 
 
 2 . Copy files that were exported into your project’s assets
+
+3 . Use these icons as values for the UIApplicationShortcutItemIconFile field inside the app icon section of the Info.plist
