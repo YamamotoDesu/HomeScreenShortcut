@@ -32,8 +32,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     func sceneWillResignActive(_ scene: UIScene) {
-        // Called when the scene will move from an active state to an inactive state.
-        // This may occur due to temporary interruptions (ex. an incoming phone call).
+        let application = UIApplication.shared
+        application.shortcutItems = [
+            UIApplicationShortcutItem(type: "trash", localizedTitle: "Trash", localizedSubtitle: nil, icon: UIApplicationShortcutIcon(systemImageName: "trash.slash.circle"))]
+        
     }
 
     func sceneWillEnterForeground(_ scene: UIScene) {
@@ -47,6 +49,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
 
+    func windowScene(_ windowScene: UIWindowScene,
+                     performActionFor shortcutItem: UIApplicationShortcutItem,
+                     completionHandler: @escaping (Bool) -> Void) {
+        
+        switch shortcutItem.type {
+        case "send", "trash":
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()) {
+                self.window?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
+                let alert = UIAlertController(title: "Hey", message: "Your quick action works!", preferredStyle: .alert)
+                let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alert.addAction(action)
+                self.window?.rootViewController?.present(alert, animated: true, completion: nil)
+            }
+        default: break
+        }
+    }
 
 }
 
