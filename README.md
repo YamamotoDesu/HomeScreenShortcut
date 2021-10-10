@@ -20,7 +20,7 @@ Apple Developer website: https://developer.apple.com/sf-symbols
 ## set static quick actions
 ### Use these icons as values for the UIApplicationShortcutItemIconFile field inside the app icon section of the Info.plist(static quick actions)　
 
-<img width="943" alt="Info_plist_—_Edited_と_HomeScreenShortcut_README_md_at_main_·_YamamotoDesu_HomeScreenShortcut" src="https://user-images.githubusercontent.com/47273077/136685234-0584705b-1549-4de9-9fe1-af93a2f011a9.png">
+<img width="1021" alt="Info_plist" src="https://user-images.githubusercontent.com/47273077/136687095-59a1ce14-330e-4bbc-98cf-75cc5f28dcfc.png">
 
 UIApplicationShortcutItemType (required): 
 > A unique string that identifies the Quick Action. For example: com.mediumproject.helloWorld. 
