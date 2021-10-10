@@ -20,27 +20,29 @@ Apple Developer website: https://developer.apple.com/sf-symbols
 
 <img width="943" alt="Info_plist_—_Edited_と_HomeScreenShortcut_README_md_at_main_·_YamamotoDesu_HomeScreenShortcut" src="https://user-images.githubusercontent.com/47273077/136685234-0584705b-1549-4de9-9fe1-af93a2f011a9.png">
 
-UIApplicationShortcutItems　
-> Define UIApplicationShortcutItems, an array of every shortcut we want to use.　
+UIApplicationShortcutItemType (required): 
+> A unique string that identifies the Quick Action. For example: com.mediumproject.helloWorld. 
 
-UIApplicationShortcutItemIconType　
-> For each child element: UIApplicationShortcutItemIconType to display a native icon.　
+UIApplicationShortcutItemTitle (required): 
+> The Quick Action title displayed to the user.
 
-UIApplicationShortcutItemTitle
-> 　UIApplicationShortcutItemTitle is the main title of your shortcut and can be localized.　
+UIApplicationShortcutItemSubtitle (optional): 
+> 　The Quick Action’s subtitle. 
 
-UIApplicationShortcutItemSubtitle
-> UIApplicationShortcutItemSubtitle describes an optional subtitle and can also be localized.
+UIApplicationShortcutItemIconType (optional): 
+>  Here you can set a predefined icon made by Apple.
 
-UIApplicationShortcutItemType
-> 　UIApplicationShortcutItemType can be used as a unique identifier to your shortcut.　
+UIApplicationShortcutItemIconFile (optional): 
+>  Use to set a custom icon.
 
-UIApplicationShortcutItemUserInfo
-> 　UIApplicationShortcutItemUserInfo can include any other informations related to your shortcut.　
-
+UIApplicationShortcutItemUserInfo (optional): 
+> A dictionary to save data.
 
 ## Set dynamic quick actions 
 ### Create Custom Quick Actions 
 
 4 . Define our shortcut either from UIMutableApplicationShortcutItem or UIApplicationShortcutItem 
+
+## Implementation 
+
 
